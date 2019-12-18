@@ -1,5 +1,8 @@
 language: minimal
 
+before_install:
+  - sudo apt install vpnc
+
 deploy:
   provider: script
   script: bash scripts/deploy.sh
