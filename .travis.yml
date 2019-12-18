@@ -1,7 +1,9 @@
-language: minimal
+dist: bionic
 
 before_install:
   - sudo apt install vpnc
+
+language: minimal
 
 deploy:
   provider: script
