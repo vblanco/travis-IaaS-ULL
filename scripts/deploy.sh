@@ -1,6 +1,7 @@
 #!/bin/bash
 echo "Open VPN connection...."
-sudo vpnc my.conf
+sudo cp my.conf /etc/vpnc
+sudo vpnc my
 echo "Connect to deployment backend...."
 ip a
 ip r
