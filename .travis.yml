@@ -1,9 +1,11 @@
 dist: bionic
 before_install:
-- openssl aes-256-cbc -K $encrypted_cfb2f4d2da43_key -iv $encrypted_cfb2f4d2da43_iv -in my.conf.enc -out my.conf -d
 - sudo apt update
 - sudo apt install vpnc
-- sudo cp my.conf /etc/vpnc/ull.conf
+- mkdir .ssh
+- openssl aes-256-cbc -K $encrypted_cfb2f4d2da43_key -iv $encrypted_cfb2f4d2da43_iv -in my_ssh_key.enc -out .ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_cfb2f4d2da43_key -iv $encrypted_cfb2f4d2da43_iv -in my.conf.enc -out my.conf -d
+- sudo mv my.conf /etc/vpnc/ull.conf
 language: minimal
 deploy:
   provider: script
