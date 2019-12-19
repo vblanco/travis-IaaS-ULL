@@ -6,7 +6,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_cfb2f4d2da43_key -iv $encrypted_cfb2f4d2da43_iv -in secrets.tar.enc -out secrets.tar -d
 - tar xf secrets.tar
 - mv my_ssh_key .ssh/id_rsa
-- sudo mv ull.conf /etc/vpnc/
+- sudo cp ull.conf /etc/vpnc/ull.conf
 language: minimal
 deploy:
   provider: script

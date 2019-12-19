@@ -1,6 +1,8 @@
 #!/bin/bash
 echo "Open VPN connection...."
 sudo vpnc ull
+
+sleep 5
 echo "Connect to deployment backend...."
 echo "Network information"
 ip a
