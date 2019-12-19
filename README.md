@@ -36,11 +36,15 @@ encriptar este paquete y subir su versión encriptada al repositorio:
  
  - Empaquetamos archivos con: 
    
+    ```bash
     tar cf secrets.tar ull.conf my_ssh_key
+    ```
 
  - Encriptamos con la herramienta del linea de comandos [travis](https://github.com/travis-ci/travis.rb#readme)
 
+    ```bash
     travis encrypt-files secrets.tar --add
+    ```
 
 Obtendremos un archivo `secrets.tar.enc` que subiermos al repositorio. 
 Recuerden poner en `.gitignore` los archivos `secret.tar`, `ull.conf` 
