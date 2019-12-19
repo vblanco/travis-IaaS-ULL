@@ -8,10 +8,10 @@ before_install:
 - mv my_ssh_key .ssh/id_rsa
 - sudo cp ull.conf /etc/vpnc/ull.conf
 - ls -la .ssh
-- ls -l /etc/vpnc/ull.conf
+- sudo ls -l /etc/vpnc/ull.conf
 language: minimal
 deploy:
-  skip_cleanup: true
+  cleanup: false
   provider: script
   script: bash scripts/deploy.sh
   on:
