@@ -1,4 +1,4 @@
-# Acceso a IaaS ULL a traves de VPN desde Travis
+# Acceso a IaaS ULL a través de VPN desde Travis
 
 Para realizar un despliegue desde Travis-CI a un backend que se ejecuta 
 en el IaaS de la ULL es necesario establecer previamente una conexión a
@@ -15,10 +15,12 @@ para estos casos. Como tenemos dos archivos con información sensible,
 se debe crear un paquete (con tar por ejemplo) con todos los archivos, 
 encriptar este paquete y subir su versión encriptada al repositorio:
 
- - `ull.conf` (confiuración VPN. NO está añadida al repositorio. Deben 
+ - `ull.conf` (configuración VPN. NO está añadida al repositorio. Deben 
     tenerlo en su carpeta local)
 
-    # Archivos ull.conf para vpnc
+    # --
+    # Archivo de configuración ull.conf para vpnc
+    # --
     IPSec gateway vpn.ull.es
     IPSec ID ULL
     IPSec secret <PSK ULL VPN key>
