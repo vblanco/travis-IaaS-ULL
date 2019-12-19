@@ -18,14 +18,17 @@ encriptar este paquete y subir su versión encriptada al repositorio:
  - `ull.conf` (configuración VPN. NO está añadida al repositorio. Deben 
     tenerlo en su carpeta local)
 
-    # --
+    ```
+    # 
     # Archivo de configuración ull.conf para vpnc
-    # --
+    # 
+
     IPSec gateway vpn.ull.es
     IPSec ID ULL
     IPSec secret <PSK ULL VPN key>
     Xauth username <your-ULL-username>
     Xauth password <your-ULL-passwd>
+    ```
 
  - `my_ssh_key` (Clave privada de la pareja generada por el comando 
    `ssh-key-gen -f my_ssh_key`. NO está añadida al repositorio. Deben 
