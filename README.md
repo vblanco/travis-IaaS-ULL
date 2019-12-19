@@ -20,7 +20,7 @@ encriptar este paquete y subir su versión encriptada al repositorio:
  - `ull.conf` (configuración VPN. NO está añadida al repositorio. Deben 
     tenerlo en su carpeta local)
 
-    ```
+    ```shell
     # 
     # Archivo de configuración ull.conf para vpnc
     # 
@@ -38,13 +38,13 @@ encriptar este paquete y subir su versión encriptada al repositorio:
  
  - Empaquetamos archivos con: 
    
-    ```bash
+    ```console
     tar cf secrets.tar ull.conf my_ssh_key
     ```
 
  - Encriptamos con la herramienta del linea de comandos [travis](https://github.com/travis-ci/travis.rb#readme)
 
-    ```bash
+    ```console
     travis encrypt-files secrets.tar --add
     ```
 
