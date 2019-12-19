@@ -9,6 +9,8 @@ En este ejemplo se activa la VPN y se realizan conexiones SSH para ejecutar
 comandos en un backend. Los archivos de configuración de VPN y la clave 
 privada SSH se deben encriptar antes de añadirlas al repositorio. 
 
+## Encriptación de archivos sensibles con Travis-CI
+
 Travis-CI provee de un 
 [mecanismo de encriptación](https://docs.travis-ci.com/user/encrypting-files/) 
 para estos casos. Como tenemos dos archivos con información sensible, 
@@ -53,3 +55,10 @@ y `my_ssh_key` para que no se suban al repositorio.
 La opción `--add` configura `.travis.yml` con la secuencia de comandos 
 necesaria para desecriptar estos archivos en la maquina virtual que se 
 instancia en Travis-CI.
+
+## Ejecución de script de despliegue
+
+El metodo de despliegue de Travis-CI que utilizaremos es el basado en un
+script a medida. En el repositorio pueden encontrar uno de ejemplo que 
+activa la VPN, realiza la ejecución remota en un backend mediante SSH y 
+finaliza desconectando la VPN
