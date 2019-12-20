@@ -1,18 +1,27 @@
 dist: bionic
+
+addons:
+  apt:
+    packages:
+    - vpnc 
+      
 before_install:
-- sudo apt update
-- sudo apt install vpnc
 - mkdir .ssh
 - openssl aes-256-cbc -K $encrypted_cfb2f4d2da43_key -iv $encrypted_cfb2f4d2da43_iv -in secrets.tar.enc -out secrets.tar -d
 - tar xf secrets.tar
 - mv my_ssh_key .ssh/id_rsa
 - sudo cp ull.conf /etc/vpnc/ull.conf
+- tracepath 8.8.8.8
+- tracepath vpn.ull.es
+  
 language: minimal
+
 deploy:
   cleanup: false
   provider: script
   script: bash scripts/deploy.sh
   on:
     branch: master
+
 notifications:
   email: false
