@@ -8,12 +8,11 @@ echo "Network information"
 ip a
 ip r
 
+sleep 5
 echo "Trying ssh to a backend server...."
 ssh usuario@10.6.129.109 hostname
-ssh usuario@10.6.129.109 whoami
-ssh usuario@10.6.129.109 ls -l
-ssh usuario@10.6.129.109 ps fx
 
+sleep 5
 echo "Disconnect VPN"
 sudo vpnc-disconnect
 

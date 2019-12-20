@@ -7,10 +7,6 @@ before_install:
 - tar xf secrets.tar
 - mv my_ssh_key .ssh/id_rsa
 - sudo cp ull.conf /etc/vpnc/ull.conf
-- ls -la .ssh
-- sudo ls -l /etc/vpnc/ull.conf
-- ip a
-- ip r
 language: minimal
 deploy:
   cleanup: false
