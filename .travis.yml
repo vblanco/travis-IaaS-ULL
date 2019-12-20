@@ -9,6 +9,8 @@ before_install:
 - sudo cp ull.conf /etc/vpnc/ull.conf
 - ls -la .ssh
 - sudo ls -l /etc/vpnc/ull.conf
+- ip a
+- ip r
 language: minimal
 deploy:
   cleanup: false
