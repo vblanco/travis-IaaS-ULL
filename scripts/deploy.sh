@@ -1,13 +1,16 @@
 #!/bin/bash
 echo "Open VPN connection...."
-sudo vpnc --debug 3 ull
+sudo vpnc ull
 
 sleep 5
 echo "Connect to deployment backend...."
 echo "Network information"
 ip a
 ip r
-echo "Tracepaht to backend ..."
+echo "Tracepath to backend ..."
+tracepath 10.6.129.109
+echo "ip route to backend ..."
+ip route get 10.6.129.109
 
 sleep 5
 echo "Trying ssh to a backend server...."
